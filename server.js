@@ -7,7 +7,7 @@ app.use(express.json())
 require('dotenv').config()
 const fs = require('fs')
 const multer = require('multer')
-const { GoogleGenerativeAI } = require('@google/generative-ai ')
+const { GoogleGenerativeAI } = require('@google/generative-ai')
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
 
@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
 })
 
 const upload = multer({ storage: storage }).single('file')
-let filePath =
+let filePath
 
 app.post('/upload', (req, res) => {
     upload(req, res, (err) => {
