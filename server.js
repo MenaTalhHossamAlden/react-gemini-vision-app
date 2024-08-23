@@ -32,4 +32,14 @@ app.post('/upload', (req, res) => {
     })
 })
 
+app.post("/gemini", async  (req, res)=>{
+    try{
+        const model = genAI.getGenerativeModel({model: "gemini-1.5-flash-latest"})
+        const prompt = req.body.message
+        console.log(prompt)
+    } catch (err) {
+        console.error(err)
+    }
+})
+
 app.listen(PORT, () => console.log("Listening to changes on PORT " + PORT))

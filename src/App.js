@@ -30,11 +30,32 @@ const App = () => {
             console.log(data)
         } catch (err) {
             console.error(err)
+            setError("Something didn't work! Please try again.")
         }
     }
 
-    const analyzerImage = () => {
-
+    const analyzerImage = async () => {
+        if(!image) {
+            setError("Error! Must have an existing image!")
+            return
+        }
+        try {
+            const options = {
+                method: 'POST',
+                body: JSON.stringify({
+                    message: value,
+                }),
+                headers: {
+                    'content-type': 'application/json',
+                }
+            }
+            const response = await fetch("http://localhost:8000/gemini", options)
+            const data = await response.json()
+            setResponse(data)
+        } catch (err) {
+            console.error(err)
+            setError("Something didn't work! Please try again.")
+        }
     }
 
     const clear = () => {
