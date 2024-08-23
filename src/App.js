@@ -50,7 +50,7 @@ const App = () => {
                 }
             }
             const response = await fetch("http://localhost:8000/gemini", options)
-            const data = await response.json()
+            const data = await response.text()
             setResponse(data)
         } catch (err) {
             console.error(err)
