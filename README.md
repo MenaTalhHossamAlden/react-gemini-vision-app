@@ -7,5 +7,7 @@
 
 This is an app that can see and answer questions about images. I used the powerful Gemini model to analyze uploaded images and provides insightful responses to your queries. It allows you to upload images from your computer and ask the app questions about them. I also added a feature to ask a question at random if you can't think of one such as "the image have puppies?" or other questions that are similar.
 
+https://github.com/user-attachments/assets/57c0ba40-6e3d-4f29-a0d4-28347bc4cb0e
 
-Uploading 2024-08-23 16-02-42.mp4…
+
+
